@@ -14,6 +14,9 @@ a{
 
 img{
     max-width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 p{
@@ -147,4 +150,32 @@ p, h1, h2, h3{
     text-align: center;
     padding: 40px;
     box-sizing: border-box;
+}
+
+
+@media (max-width: 900px){
+    body{
+        gap: 40px;
+    }
+    .md{
+        grid-template-columns: 1fr;
+    }
+    .subtitulo{
+        text-align: center;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 600px){
+    .introducao::before{
+        display: none;
+    }
+    .introducao{
+        text-align: left;
+        justify-items: start;
+    }
+    .subtitulo{
+        font-size: 3rem;
+        padding: 50px;
+    }
 }
